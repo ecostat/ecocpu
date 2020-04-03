@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: mytest
+  description: This is my sample
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/ocpu
+paths:
+  /library/MASS/data/Boston/print:
+    get:
+      summary: Boston data
+      description: list of data
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+        '400':
+          description: invalid 
+        default:
+          description: Unexpected error
+components: {}
