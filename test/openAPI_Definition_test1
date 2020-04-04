@@ -8,6 +8,8 @@ servers:
 paths:
   /library/MASS/data/Boston/print:
     get:
+      tags:
+      - bostonprint
       summary: Boston data
       description: list of data
       responses:
@@ -21,4 +23,60 @@ paths:
           description: invalid 
         default:
           description: Unexpected error
+  /library/ecocpu/R/myfun/json:
+    get:
+      tags:
+      - myfun
+      summary: calc myfun
+      parameters:
+        - in: path
+          name: x
+          schema:
+            type: integer
+          required: true
+          description: ASDASD
+      responses:
+        default:
+          description: Unexpected error
+    post:
+      tags:
+      - myfun post
+      summary: Updates a pet in the store with form data
+      operationId: updatePetWithForm
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                x:
+                  type: integer
+                  description: number of 
+      responses:
+        405:
+          description: Invalid input
+          content: {}
+  /library/stats/R/rnorm:   
+    post:
+      tags:
+      - rnorm
+      summary: Updates a pet in the store with form data
+      operationId: justanother
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                n:
+                  type: integer
+                  description: number of 
+                mean:
+                  type: integer
+                  description: mean of
+      responses:
+        405:
+          description: Invalid input
+          content: {}
+
 components: {}
