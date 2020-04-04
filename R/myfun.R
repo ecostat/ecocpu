@@ -1,3 +1,3 @@
-myfun <- function(x){
-  return(x*2)
+myfun <- function(x = 10){
+  return(x*3)
 }
