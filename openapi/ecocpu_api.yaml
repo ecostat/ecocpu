@@ -1,0 +1,72 @@
+openapi: 3.0.1
+info:
+  title: ecocat
+  description: simple test
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/ocpu
+paths:
+  /library/MASS/data/Boston/print:
+    get:
+      tags:
+      - bostonprint
+      summary: Boston data
+      description: list of data
+      responses:
+        '200':
+          description: successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+        '400':
+          description: invalid 
+        default:
+          description: Unexpected error
+  /library/ecocpu/R/myfun/json:
+    get:
+      tags:
+      - myfun get 
+      summary: display myfun
+      responses:
+        default:
+          description: default return value
+    post:
+      tags:
+      - myfun post
+      summary: calc myfun using parameter x
+      operationId: calcmyfun
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                x:
+                  type: integer
+                  description: some number
+      responses:
+        405:
+          description: Invalid request
+          content: {}
+  /library/stats/R/rnorm:   
+    post:
+      tags:
+      - rnorm
+      summary: generates n obs from a normal distribution with mean m
+      operationId: calcrnorm
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                n:
+                  type: integer
+                  description: number of 
+                mean:
+                  type: integer
+                  description: mean of
+      responses:
+        405:
+          description: strange response
