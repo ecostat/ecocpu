@@ -2,7 +2,7 @@
 
 # flake8: noqa
 """
-    ocoutest
+    ocputest
 
     simple test  # noqa: E501
 

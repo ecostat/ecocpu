@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    ocoutest
+    ocputest
 
     simple test  # noqa: E501
 
@@ -26,10 +26,10 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="ocoutest",
+    description="ocputest",
     author_email="",
     url="",
-    keywords=["Swagger", "ocoutest"],
+    keywords=["Swagger", "ocputest"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,

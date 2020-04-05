@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-    ocoutest
+    ocputest
 
     simple test  # noqa: E501
 
